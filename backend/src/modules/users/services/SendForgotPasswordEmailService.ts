@@ -15,12 +15,9 @@ class SendForgotPasswordEmailService {
   constructor(
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
-
-    @inject('HashProvider')
-    private hashProvider: IHashProvider,
   ) {}
 
-  public async execute(): Promise<void> {}
+  public async execute(data: IRequest): Promise<void> {}
 }
 
 export default SendForgotPasswordEmailService;
