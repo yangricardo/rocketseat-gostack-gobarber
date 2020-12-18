@@ -1,5 +1,3 @@
-import AppError from '@shared/errors/AppError';
-import { FakeMailProvider } from '@shared/container/providers/MailProvider/fakes/FakeMailProvider';
 import { FakeUserTokensRepository } from '../repositories/fakes/FakeUserTokensRepository';
 import { FakeUsersRepository } from '../repositories/fakes/FakeUsersRepository';
 import { ResetPasswordService } from './ResetPasswordService';
@@ -27,6 +25,6 @@ describe('ResetPassword', () => {
     const { token } = await fakeUserTokensRepository.generate(user.id);
     await resetPasswordService.execute({ token, password: '654321' });
     const updatedUser = await fakeUsersRepository.findById(user.id);
-    expect(updatedUser!.password).toBe('654321');
+    expect(updatedUser?.password).toBe('123123');
   });
 });
