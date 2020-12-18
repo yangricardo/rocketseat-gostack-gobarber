@@ -192,6 +192,7 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 
 ### Node ###
+package-lock.json
 # Logs
 logs
 npm-debug.log*
@@ -603,7 +604,7 @@ $RECYCLE.BIN/
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-
+yarn.lock
 # if you are NOT using Zero-installs, then:
 # comment the following lines
 !.yarn/cache
