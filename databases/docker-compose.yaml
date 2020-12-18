@@ -3,6 +3,8 @@ version: '3'
 services:
   postgres:
     image: postgres:12
+    hostname: postgres.gobarber
+    container_name: postgres.gobarber
     environment:
       POSTGRES_DB: gobarber_db
       POSTGRES_USER: gobarber_admin
