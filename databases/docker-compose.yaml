@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: gobarber_db
+      POSTGRES_USER: gobarber_admin
+      POSTGRES_PASSWORD: gobarber_password
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+    networks:
+      - gobarber
+
+networks:
+  gobarber:
+    driver: bridge
